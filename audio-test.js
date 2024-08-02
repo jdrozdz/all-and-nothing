@@ -14,7 +14,7 @@ ctrlq1.innerHTML = '<div id="youtube-player1"></div>';
 ctrlq1.style.cssText = 'width:1px;margin:2em auto;cursor:pointer;cursor:hand;display:none; position:absolute: top:0;left:0';
 ctrlq1.onclick = toggleAudio1;
 
-const player1 = new YT.Player('youtube-player1', {
+const player1 = new YT.Player('soad1', {
 	height: '0',
 	width: '0',
 	videoId: ctrlq1.dataset.video,
@@ -29,11 +29,10 @@ const player1 = new YT.Player('youtube-player1', {
 });
 
 function onPlayerReady1(event) {
-	player1.setPlaybackQuality("small");
-	document.getElementById("youtube-audio1").style.display = "block";
-	togglePlayButton1(player1.getPlayerState() !== 5);
+	//player1.setPlaybackQuality("small");
+	event.target.playVideo();
 }
 
 function onPlayerStateChange1(event) {
-	if (event.data === 0) { alert('K BOOM'); }
+	if (event.data === 0) { }
 }
