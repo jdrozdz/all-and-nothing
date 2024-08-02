@@ -1,8 +1,6 @@
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
+document.body.appendChild(tag);
 document.addEventListener("DOMContentLoaded", function() {
 	const p1 = document.createElement('div');
 	p1.setAttribute('data-video','bE2r7r7VVic');
